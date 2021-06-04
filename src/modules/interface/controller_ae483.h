@@ -4,6 +4,14 @@
 #include "stabilizer_types.h"
 #include "commander.h"
 
+// attitude_pid_controller.c
+#include <stdbool.h>
+#include "FreeRTOS.h"
+
+// position_controller_pid.c
+#include <math.h>
+#include "num.h"
+
 void controllerAE483Init(void);
 bool controllerAE483Test(void);
 void controllerAE483(control_t *control, setpoint_t *setpoint,
